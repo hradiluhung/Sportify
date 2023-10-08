@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="team_name">Team Name</string>
+    <string name="code_team">Code Team</string>
+    <string name="stadium_name">Stadium Name</string>
+    <string name="player_name">Player Name</string>
+</resources>

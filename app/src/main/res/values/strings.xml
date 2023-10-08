@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Sportify</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_favorite">Favorite</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="something_wrong">Ops something wrong!</string>
+    <string name="no_data">Empty Data</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="description_team">Description Team</string>
+    <string name="kit_color">Kit Color</string>
+    <string name="detail_team">Detail Team</string>
+    <string name="title_teamplayer">Team Player</string>
+    <string name="title_player">Player</string>
+    <string name="title_favorite">Module Title</string>
+</resources>
