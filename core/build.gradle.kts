@@ -20,7 +20,15 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+
+        debug {
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -43,12 +51,12 @@ android {
 
 dependencies {
 
-    val kotlinVersion = "1.8.20"
+    val kotlinVersion = "1.9.0"
     val roomVersion = "2.5.2"
     val retrofitVersion = "2.9.0"
     val loggingInterceptorVersion = "4.9.3"
     val kotlinCoroutinesVersion = "1.6.1"
-    val lifecycleVersion = "2.6.1"
+    val lifecycleVersion = "2.6.2"
 
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
