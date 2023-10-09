@@ -1,5 +1,6 @@
 package com.adiluhung.sportify.core.ui
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +15,7 @@ class TeamAdapter : RecyclerView.Adapter<TeamAdapter.ListViewHolder>() {
     private var listData = ArrayList<Team>()
     var onItemClick: ((Team) -> Unit)? = null
 
+    @SuppressLint("NotifyDataSetChanged")
     fun setData(newListData: List<Team>?) {
         if (newListData == null) return
         listData.clear()

@@ -96,6 +96,7 @@ public *;
  -keep class com.example.core.data.network.response.** { *; }
 
  -keep class com.adiluhung.sportify.core.data.source.remote.response.*
+ -keep class kotlin.LazyKt
 
 -dontwarn org.bouncycastle.jsse.BCSSLParameters
 -dontwarn org.bouncycastle.jsse.BCSSLSocket
