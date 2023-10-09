@@ -95,6 +95,7 @@ public *;
  -keep,allowobfuscation,allowshrinking class com.example.core.data.source.Resource
  -keep class com.example.core.data.network.response.** { *; }
 
+ -keep class com.adiluhung.sportify.core.data.source.remote.response.*
 
 -dontwarn org.bouncycastle.jsse.BCSSLParameters
 -dontwarn org.bouncycastle.jsse.BCSSLSocket
