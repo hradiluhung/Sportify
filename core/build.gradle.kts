@@ -77,4 +77,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
     implementation("androidx.room:room-ktx:$roomVersion")
     api("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion")
+
+    implementation("net.zetetic:android-database-sqlcipher:4.4.0")
+    implementation("androidx.sqlite:sqlite-ktx:2.3.1")
 }

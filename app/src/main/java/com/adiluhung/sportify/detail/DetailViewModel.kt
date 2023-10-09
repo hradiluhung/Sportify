@@ -6,5 +6,5 @@ import com.adiluhung.sportify.core.domain.usecase.TeamUseCase
 
 class DetailViewModel(private val teamUseCase: TeamUseCase) : ViewModel() {
     fun setFavoriteTeam(team: Team, newStatus: Boolean) =
-         teamUseCase.setFavoriteTeam(team, newStatus)
+        teamUseCase.setFavoriteTeam(team, newStatus)
 }
