@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.adiluhung.sportify.core.R
 import com.adiluhung.sportify.core.databinding.ItemListPlayerBinding
-import com.adiluhung.sportify.core.databinding.ItemListTeamBinding
 import com.adiluhung.sportify.core.domain.model.Player
 import com.bumptech.glide.Glide
 

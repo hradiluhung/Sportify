@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.adiluhung.sportify.R
 import com.adiluhung.sportify.core.ui.TeamAdapter
 import com.adiluhung.sportify.detail.DetailTeamActivity
 import com.adiluhung.sportify.favorite.databinding.ActivityFavoriteBinding

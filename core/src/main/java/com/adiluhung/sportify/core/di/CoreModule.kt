@@ -10,6 +10,9 @@ import com.adiluhung.sportify.core.data.source.remote.network.ApiService
 import com.adiluhung.sportify.core.domain.repository.IPlayerRepository
 import com.adiluhung.sportify.core.domain.repository.ITeamRepository
 import com.adiluhung.sportify.core.utils.AppExecutors
+import net.sqlcipher.database.SQLiteDatabase
+import net.sqlcipher.database.SupportFactory
+import okhttp3.CertificatePinner
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidContext
@@ -22,19 +25,29 @@ val databaseModule = module {
     factory { get<TeamDatabase>().teamDao() }
     factory { get<TeamDatabase>().playerDao() }
     single {
+        val passphrase: ByteArray = SQLiteDatabase.getBytes("adiluhung".toCharArray())
+        val factory = SupportFactory(passphrase)
         Room.databaseBuilder(
             androidContext(),
             TeamDatabase::class.java, "Teams.db"
-        ).fallbackToDestructiveMigration().build()
+        ).fallbackToDestructiveMigration().openHelperFactory(factory).build()
     }
 }
 
 val networkModule = module {
     single {
+        val hostname = "thesportsdb.com"
+        val certificatePinner = CertificatePinner.Builder()
+            .add(hostname, "sha256/smdLYb0tBmIrtC1iYizy1svf7FACM13T2oOwdEjnagw=")
+            .add(hostname, "sha256/i7LHCNm4KCjPzj1tqkk+ay+iOmDaEPHvFlQiOwufi8M=")
+            .add(hostname, "sha256/ljTDgm/k397r3IdZEKRul2NCPhqITZKGW8ue2nIVaGc=")
+            .build()
+
         OkHttpClient.Builder()
             .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
             .connectTimeout(120, TimeUnit.SECONDS)
             .readTimeout(120, TimeUnit.SECONDS)
+            .certificatePinner(certificatePinner)
             .build()
     }
 

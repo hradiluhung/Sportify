@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.adiluhung.sportify.R
 import com.adiluhung.sportify.core.data.Resource
 import com.adiluhung.sportify.core.ui.PlayerAdapter
 import com.adiluhung.sportify.player.databinding.ActivityPlayerBinding

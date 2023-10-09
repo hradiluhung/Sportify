@@ -5,7 +5,7 @@ import androidx.room.RoomDatabase
 import com.adiluhung.sportify.core.data.source.local.entity.PlayerEntity
 import com.adiluhung.sportify.core.data.source.local.entity.TeamEntity
 
-@Database(entities = [TeamEntity::class, PlayerEntity::class], version = 2, exportSchema = false)
+@Database(entities = [TeamEntity::class, PlayerEntity::class], version = 1, exportSchema = false)
 abstract class TeamDatabase : RoomDatabase() {
     abstract fun teamDao(): TeamDao
 
